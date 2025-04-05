@@ -1,0 +1,452 @@
+Area Code,"State, etc.",Main City,Country,Overlay Complex,Time Zone
+201,New Jersey,Jersey City,USA,201/551,E
+202,D.C.,Washington,USA,202/771,E
+203,Connecticut,Bridgeport,USA,203/475,E
+204,Manitoba,Winnipeg,Canada,204/431/584,C
+205,Alabama,Birmingham,USA,205/659,C
+206,Washington,Seattle,USA,,P
+207,Maine,Portland,USA,,E
+208,Idaho,Meridian,USA,208/986,"M,P"
+209,California,Stockton,USA,209/350,P
+210,Texas,San Antonio,USA,210/726,C
+212,New York,NYC Manhattan,USA,212/646/917/332,E
+213,California,Los Angeles,USA,323/213,P
+214,Texas,Dallas,USA,214/972/469/945,C
+215,Pennsylvania,Philadelphia,USA,215/267/445,E
+216,Ohio,Cleveland,USA,,E
+217,Illinois,Springfield,USA,217/447,C
+218,Minnesota,Duluth,USA,,C
+219,Indiana,Hammond,USA,,"E,C"
+220,Ohio,Newark,USA,740/220,E
+223,Pennsylvania,Lancaster,USA,717/223,E
+224,Illinois,Elgin,USA,847/224,C
+225,Louisiana,Baton Rouge,USA,,C
+226,Ontario,London,Canada,519/226/548/382,E
+227,Maryland,Germantown,USA,301/240/227,E
+228,Mississippi,Gulfport,USA,,C
+229,Georgia,Albany,USA,,E
+231,Michigan,Muskegon,USA,,E
+234,Ohio,Akron,USA,330/234,E
+235,Missouri,Columbia,USA,573/235,C
+236,British Columbia,Kelowna,Canada,"250/778/236/672, 604/778/236/672",P
+239,Florida,Cape Coral,USA,,E
+240,Maryland,Germantown,USA,301/240/227,E
+242,Bahamas,Nassau,Bahamas,,E
+246,Barbados,Bridgetown,Barbados,,AST
+248,Michigan,Troy,USA,248/947,E
+249,Ontario,Sudbury,Canada,705/249/683,E
+250,British Columbia,Kelowna,Canada,250/778/236/672,P
+251,Alabama,Mobile,USA,,C
+252,North Carolina,Greenville,USA,,E
+253,Washington,Tacoma,USA,,P
+254,Texas,Killeen,USA,,C
+256,Alabama,Huntsville,USA,256/938,C
+260,Indiana,Fort Wayne,USA,,E
+262,Wisconsin,Kenosha,USA,,C
+263,Quebec,Montreal,Canada,514/438/263,E
+264,Anguilla,North Side,Anguilla,,AST
+267,Pennsylvania,Philadelphia,USA,215/267/445,E
+268,Antigua and Barbuda,Saint John's,Antigua and Barbuda,,AST
+269,Michigan,Kalamazoo,USA,,E
+270,Kentucky,Bowling Green,USA,270/364,"E,C"
+272,Pennsylvania,Scranton,USA,570/272,E
+274,Wisconsin,Green Bay,USA,920/274,C
+276,Virginia,Bristol,USA,,E
+279,California,Sacramento,USA,916/279,P
+281,Texas,Houston,USA,713/281/832/346/621,C
+283,Ohio,Cincinnati,USA,513/283,E
+284,British Virgin Islands,Tortola,British Virgin Islands,,AST
+289,Ontario,Mississauga,Canada,905/289/365/742,P
+301,Maryland,Germantown,USA,301/240/227,E
+302,Delaware,Wilmington,USA,,E
+303,Colorado,Denver,USA,303/720/983,M
+304,West Virginia,Charleston,USA,304/681,E
+305,Florida,Miami,USA,305/786/645,E
+306,Saskatchewan,Saskatoon,Canada,306/639/474,CST
+307,Wyoming,Cheyenne,USA,,M
+308,Nebraska,Grand Island,USA,,"C,M"
+309,Illinois,Peoria,USA,309/861,C
+310,California,Torrance,USA,310/424,P
+312,Illinois,Chicago Downtown,USA,312/872,C
+313,Michigan,Detroit,USA,,E
+314,Missouri,St Louis,USA,314/557,C
+315,New York,Syracuse,USA,315/680,E
+316,Kansas,Wichita,USA,,C
+317,Indiana,Indianapolis,USA,317/463,E
+318,Louisiana,Shreveport,USA,,C
+319,Iowa,Cedar Rapids,USA,,C
+320,Minnesota,St Cloud,USA,,C
+321,Florida,Orlando,USA,"407/321/689,321",E
+321,Florida,Palm Bay,USA,,E
+323,California,Los Angeles,USA,323/213,P
+324,Florida,Jacksonville,USA,904/324,E
+325,Texas,Abilene,USA,,C
+326,Ohio,Dayton,USA,937/326,E
+327,Arkansas,Jonesboro,USA,870/327,C
+329,New York,New City,USA,845/329,E
+330,Ohio,Akron,USA,330/234,E
+331,Illinois,Aurora,USA,630/331,C
+332,New York,NYC Manhattan,USA,212/646/917/332,E
+334,Alabama,Montgomery,USA,,C
+336,North Carolina,Greensboro,USA,336/743,E
+337,Louisiana,Lafayette,USA,,C
+339,Massachusetts,Lynn,USA,781/339,E
+340,US Virgin Islands,Charlotte Amalie,US Virgin Islands,,AST
+341,California,Oakland,USA,510/341,P
+343,Ontario,Ottawa,Canada,613/343/753,E
+345,Cayman Islands,George Town,Cayman Islands,,EST
+346,Texas,Houston,USA,713/281/832/346/621,C
+347,New York,New York,USA,718/347/917/929,E
+350,California,Stockton,USA,209/350,P
+351,Massachusetts,Lowell,USA,978/351,E
+352,Florida,Gainesville,USA,,E
+353,Wisconsin,Madison,USA,608/353,C
+354,Quebec,Laval,Canada,450/579/354,E
+357,California,Fresno,USA,559/357,P
+360,Washington,Vancouver,USA,360/564,P
+361,Texas,Corpus Christi,USA,,C
+363,New York,Hempstead,USA,516/363,E
+364,Kentucky,Bowling Green,USA,270/364,"E,C"
+365,Ontario,Mississauga,Canada,905/289/365/742,E
+367,Quebec,Quebec City,Canada,418/581/367,E
+368,Alberta,Calgary,Canada,"403/587/825/368, 780/587/825/368",M
+369,California,Santa Rosa,USA,707/369,P
+380,Ohio,Columbus,USA,614/380,E
+382,Ontario,London,Canada,519/226/548/382,E
+385,Utah,Salt Lake City,USA,801/385,M
+386,Florida,Deltona,USA,,E
+401,Rhode Island,Providence,USA,,E
+402,Nebraska,Omaha,USA,402/531,"C,M"
+403,Alberta,Calgary,Canada,403/587/825/368,M
+404,Georgia,Atlanta,USA,404/678/470/943,E
+405,Oklahoma,Oklahoma City,USA,405/572,C
+406,Montana,Billings,USA,,M
+407,Florida,Orlando,USA,407/321/689,E
+408,California,San Jose,USA,408/669,P
+409,Texas,Beaumont,USA,,C
+410,Maryland,Baltimore,USA,410/443/667,E
+412,Pennsylvania,Pittsburgh,USA,412/878,E
+413,Massachusetts,Springfield,USA,,E
+414,Wisconsin,Milwaukee,USA,,C
+415,California,San Francisco,USA,415/628,P
+416,Ontario,Toronto,Canada,416/647/437,E
+417,Missouri,Springfield,USA,,C
+418,Quebec,Quebec City,Canada,418/581/367,E
+419,Ohio,Toledo,USA,419/567,E
+423,Tennessee,Chattanooga,USA,,"E,C"
+424,California,Torrance,USA,310/424,P
+425,Washington,Bellevue,USA,,P
+428,New Brunswick,Saint John,Canada,506/428,A
+430,Texas,Tyler,USA,903/430,C
+431,Manitoba,Winnipeg,Canada,204/431/584,C
+432,Texas,Midland,USA,,C
+434,Virginia,Lynchburg,USA,,E
+435,Utah,St George,USA,,M
+436,Ohio,Lorain,USA,440/436,E
+437,Ontario,Toronto,Canada,416/647/437,E
+438,Quebec,Montreal,Canada,514/438/263,E
+440,Ohio,Lorain,USA,440/436,E
+441,Bermuda,Pembroke,Bermuda,,A
+442,California,Oceanside,USA,760/442,P
+443,Maryland,Baltimore,USA,410/443/667,E
+445,Pennsylvania,Philadelphia,USA,215/267/445,E
+447,Illinois,Springfield,USA,217/447,C
+448,Florida,Tallahassee,USA,850/448,"E,C"
+450,Quebec,Laval,Canada,450/579/354,E
+458,Oregon,Eugene,USA,541/458,"M,P"
+463,Indiana,Indianapolis,USA,317/463,E
+464,Illinois,Cicero,USA,708/464,C
+468,Quebec,Gatineau,Canada,819/873/468,E
+469,Texas,Dallas,USA,214/972/469/945,C
+470,Georgia,Atlanta,USA,"404/678/470/943, 770/678/470/943",E
+472,North Carolina,Fayetteville,USA,910/472,E
+473,Grenada,Saint George's,Grenada,,AST
+474,Saskatchewan,Saskatoon,Canada,306/639/474,CST
+475,Connecticut,Bridgeport,USA,203/475,E
+478,Georgia,Macon,USA,,E
+479,Arkansas,Fort Smith,USA,,C
+480,Arizona,Phoenix,USA,480/602/623,MST
+484,Pennsylvania,Allentown,USA,610/484/835,E
+501,Arkansas,Little Rock,USA,,C
+502,Kentucky,Louisville,USA,,E
+503,Oregon,Portland,USA,503/971,P
+504,Louisiana,New Orleans,USA,,C
+505,New Mexico,Albuquerque,USA,,M
+506,New Brunswick,Saint John,Canada,506/428,A
+507,Minnesota,Rochester,USA,,C
+508,Massachusetts,Norfolk,USA,508/774,E
+509,Washington,Spokane,USA,,P
+510,California,Oakland,USA,510/341,P
+512,Texas,Austin,USA,512/737,C
+513,Ohio,Cincinnati,USA,513/283,E
+514,Quebec,Montreal,Canada,514/438/263,E
+515,Iowa,Des Moines,USA,,C
+516,New York,Hempstead,USA,516/363,E
+517,Michigan,Lansing,USA,,E
+518,New York,Albany,USA,518/838,E
+519,Ontario,London,Canada,519/226/548/382,E
+520,Arizona,Tucson,USA,,MST
+530,California,Chico,USA,530/837,P
+531,Nebraska,Omaha,USA,402/531,"C,M"
+534,Wisconsin,Eau Claire,USA,715/534,C
+539,Oklahoma,Tulsa,USA,918/539,C
+540,Virginia,Roanoke,USA,540/826,E
+541,Oregon,Eugene,USA,541/458,"M,P"
+548,Ontario,London,Canada,519/226/548/382,E
+551,New Jersey,Jersey City,USA,201/551,E
+557,Missouri,St Louis,USA,314/557,C
+559,California,Fresno,USA,559/357,P
+561,Florida,West Palm Beach,USA,561/728,E
+562,California,Long Beach,USA,,P
+563,Iowa,Davenport,USA,,C
+564,Washington,Vancouver,USA,360/564,P
+567,Ohio,Toledo,USA,419/567,E
+570,Pennsylvania,Scranton,USA,570/272,E
+571,Virginia,Arlington,USA,703/571,E
+572,Oklahoma,Oklahoma City,USA,405/572,C
+573,Missouri,Columbia,USA,573/235,C
+574,Indiana,South Bend,USA,,"E,C"
+575,New Mexico,Las Cruces,USA,,M
+579,Quebec,Laval,Canada,450/579/354,E
+580,Oklahoma,Lawton,USA,,C
+581,Quebec,Quebec City,Canada,418/581/367,E
+582,Pennsylvania,Erie,USA,814/582,E
+584,Manitoba,Winnipeg,Canada,204/431/584,C
+585,New York,Rochester,USA,,E
+586,Michigan,Warren,USA,,E
+587,Alberta,Calgary,Canada,"403/587/825/368, 780/587/825/368",M
+601,Mississippi,Jackson,USA,601/769,C
+602,Arizona,Phoenix,USA,480/602/623,MST
+603,New Hampshire,Manchester,USA,,E
+604,British Columbia,Vancouver,Canada,604/778/236/672,P
+605,South Dakota,Sioux Falls,USA,,"C,M"
+606,Kentucky,Ashland,USA,,"E,C"
+607,New York,Binghamton,USA,,E
+608,Wisconsin,Madison,USA,608/353,C
+609,New Jersey,Trenton,USA,609/640,E
+610,Pennsylvania,Allentown,USA,610/484/835,E
+612,Minnesota,Minneapolis,USA,,C
+613,Ontario,Ottawa,Canada,613/343/753,E
+614,Ohio,Columbus,USA,614/380,E
+615,Tennessee,Nashville,USA,615/629,C
+616,Michigan,Grand Rapids,USA,,E
+617,Massachusetts,Boston,USA,617/857,E
+618,Illinois,Belleville,USA,618/730,C
+619,California,San Diego,USA,619/858,P
+620,Kansas,Hutchinson,USA,,"C,M"
+621,Texas,Houston,USA,713/281/832/346/621,C
+623,Arizona,Phoenix,USA,480/602/623,MST
+624,New York,Buffalo,USA,716/624,E
+626,California,Pasadena,USA,,P
+628,California,San Francisco,USA,415/628,P
+629,Tennessee,Nashville,USA,615/629,C
+630,Illinois,Aurora,USA,630/331,C
+631,New York,Brentwood,USA,631/934,E
+636,Missouri,O'Fallon,USA,,C
+639,Saskatchewan,Saskatoon,Canada,306/639/474,CST
+640,New Jersey,Trenton,USA,609/640,E
+641,Iowa,Mason City,USA,,C
+645,Florida,Miami,USA,305/786/645,E
+646,New York,NYC Manhattan,USA,212/646/917/332,E
+647,Ontario,Toronto,Canada,416/647/437,E
+649,Turks and Caicos,Honda Road,Turks and Caicos,,E
+650,California,Daly City,USA,,P
+651,Minnesota,St Paul,USA,,C
+656,Florida,Tampa,USA,813/656,E
+657,California,Anaheim,USA,714/657,P
+658,Jamaica,Kingston,Jamaica,876/658,EST
+659,Alabama,Birmingham,USA,205/659,C
+660,Missouri,Sedalia,USA,,C
+661,California,Bakersfield,USA,,P
+662,Mississippi,Southaven,USA,,C
+664,Montserrat,Look Out,Montserrat,,AST
+667,Maryland,Baltimore,USA,410/443/667,E
+669,California,San Jose,USA,408/669,P
+670,Northern Mariana,Saipan,Northern Mariana,,ChST
+671,Guam,Dededo,Guam,,ChST
+672,British Columbia,Kelowna,Canada,"250/778/236/672, 604/778/236/672",P
+678,Georgia,Atlanta,USA,"404/678/470/943, 770/678/470/943",E
+680,New York,Syracuse,USA,315/680,E
+681,West Virginia,Charleston,USA,304/681,E
+682,Texas,Fort Worth,USA,817/682,C
+683,Ontario,Sudbury,Canada,705/249/683,E
+684,American Samoa,Tafuna,American Samoa,,SST
+686,Virginia,Richmond,USA,804/686,E
+689,Florida,Orlando,USA,407/321/689,E
+701,North Dakota,Fargo,USA,,"C,M"
+702,Nevada,Las Vegas,USA,702/725,P
+703,Virginia,Arlington,USA,703/571,E
+704,North Carolina,Charlotte,USA,704/980,E
+705,Ontario,Sudbury,Canada,705/249/683,E
+706,Georgia,Augusta,USA,706/762,E
+707,California,Santa Rosa,USA,707/369,P
+708,Illinois,Cicero,USA,708/464,C
+709,Newfoundland and Labrador,St John's,Canada,709/879,N
+712,Iowa,Sioux City,USA,,C
+713,Texas,Houston,USA,713/281/832/346/621,C
+714,California,Anaheim,USA,714/657,P
+715,Wisconsin,Eau Claire,USA,715/534,C
+716,New York,Buffalo,USA,716/624,E
+717,Pennsylvania,Lancaster,USA,717/223,E
+718,New York,New York,USA,718/347/917/929,E
+719,Colorado,Colorado Springs,USA,,M
+720,Colorado,Denver,USA,303/720/983,M
+721,Sint Maarten,Lower Prince's Quarter,Sint Maarten,,AST
+724,Pennsylvania,New Castle,USA,724/878,E
+725,Nevada,Las Vegas,USA,702/725,P
+726,Texas,San Antonio,USA,210/726,C
+727,Florida,St Petersburg,USA,,E
+728,Florida,West Palm Beach,USA,561/728,E
+730,Illinois,Belleville,USA,618/730,C
+731,Tennessee,Jackson,USA,,C
+732,New Jersey,Toms River,USA,732/848,E
+734,Michigan,Ann Arbor,USA,,E
+737,Texas,Austin,USA,512/737,C
+740,Ohio,Newark,USA,740/220,E
+742,Ontario,Mississauga,Canada,905/289/365/742,E
+743,North Carolina,Greensboro,USA,336/743,E
+747,California,Glendale,USA,818/747,P
+753,Ontario,Ottawa,Canada,613/343/753,E
+754,Florida,Fort Lauderdale,USA,954/754,E
+757,Virginia,Virginia Beach,USA,757/948,E
+758,Saint Lucia,Castries,Saint Lucia,,AST
+760,California,Oceanside,USA,760/442,P
+762,Georgia,Augusta,USA,706/762,E
+763,Minnesota,Brooklyn Park,USA,,C
+765,Indiana,Lafayette,USA,,E
+767,Dominica,Roseau,Dominica,,AST
+769,Mississippi,Jackson,USA,601/769,C
+770,Georgia,Roswell,USA,770/678/470/943,E
+771,D.C.,Washington,USA,202/771,E
+772,Florida,Port St Lucie,USA,,E
+773,Illinois,Chicago,USA,773/872,C
+774,Massachusetts,Norfolk,USA,508/774,E
+775,Nevada,Reno,USA,,P
+778,British Columbia,Vancouver,Canada,"604/778/236/672, 250/778/236/672",P
+779,Illinois,Joliet,USA,815/779,C
+780,Alberta,Edmonton,Canada,780/587/825/368,M
+781,Massachusetts,Lynn,USA,781/339,E
+782,Nova Scotia-Prince Edward Island,Halifax,Canada,902/782,A
+784,Saint Vincent,Calliaqua,Saint Vincent,,AST
+785,Kansas,Topeka,USA,,"C,M"
+786,Florida,Miami,USA,305/786/645,E
+787,Puerto Rico,San Juan,Puerto Rico,787/939,AST
+800,Toll free,,All NANP,,
+801,Utah,Salt Lake City,USA,801/385,M
+802,Vermont,Woodbury,USA,,E
+803,South Carolina,Columbia,USA,803/839,E
+804,Virginia,Richmond,USA,804/686,E
+805,California,Oxnard,USA,805/820,P
+806,Texas,Lubbock,USA,,C
+807,Ontario,Thunder Bay,Canada,,"E,C"
+808,Hawaii,Honolulu,USA,,HST
+809,Dominican Republic,Santo Domingo,Dominican Republic,809/829/849,AST
+810,Michigan,Flint,USA,,E
+812,Indiana,Evansville,USA,812/930,"E,C"
+813,Florida,Tampa,USA,813/656,E
+814,Pennsylvania,Erie,USA,814/582,E
+815,Illinois,Joliet,USA,815/779,C
+816,Missouri,Kansas City,USA,816/975,C
+817,Texas,Fort Worth,USA,817/682,C
+818,California,Glendale,USA,818/747,P
+819,Quebec,Gatineau,Canada,819/873/468,E
+820,California,Oxnard,USA,805/820,P
+821,South Carolina,Greenville,USA,864/821,E
+825,Alberta,Calgary,Canada,"403/587/825/368, 780/587/825/368",M
+826,Virginia,Roanoke,USA,540/826,E
+828,North Carolina,Asheville,USA,,E
+829,Dominican Republic,Santo Domingo,Dominican Republic,809/829/849,AST
+830,Texas,New Braunfels,USA,,C
+831,California,Salinas,USA,,P
+832,Texas,Houston,USA,713/281/832/346/621,C
+833,Toll free,,All NANP,,
+835,Pennsylvania,Allentown,USA,610/484/835,E
+837,California,Chico,USA,530/837,P
+838,New York,Albany,USA,518/838,E
+839,South Carolina,Columbia,USA,803/839,E
+840,California,San Bernardino,USA,909/840,P
+843,South Carolina,Charleston,USA,843/854,E
+844,Toll free,,All NANP,,
+845,New York,New City,USA,845/329,E
+847,Illinois,Elgin,USA,847/224,C
+848,New Jersey,Toms River,USA,732/848,E
+849,Dominican Republic,Santo Domingo,Dominican Republic,809/829/849,AST
+850,Florida,Tallahassee,USA,850/448,"E,C"
+854,South Carolina,Charleston,USA,843/854,E
+855,Toll free,,All NANP,,
+856,New Jersey,Camden,USA,,E
+857,Massachusetts,Boston,USA,617/857,E
+858,California,San Diego,USA,619/858,P
+859,Kentucky,Lexington,USA,,E
+860,Connecticut,Hartford,USA,860/959,E
+861,Illinois,Peoria,USA,309/861,C
+862,New Jersey,Newark,USA,973/862,E
+863,Florida,Lakeland,USA,,E
+864,South Carolina,Greenville,USA,864/821,E
+865,Tennessee,Knoxville,USA,,E
+866,Toll free,,All NANP,,
+867,Yukon-Northwest Territories-Nunavut,Whitehorse,Canada,,"C,M,P"
+868,Trinidad and Tobago,Chaguanas,Trinidad and Tobago,,AST
+869,Saint Kitts and Nevis,Basseterre,Saint Kitts and Nevis,,AST
+870,Arkansas,Jonesboro,USA,870/327,C
+872,Illinois,Chicago Downtown,USA,"312/872, 773/872",C
+873,Quebec,Gatineau,Canada,819/873/468,E
+876,Jamaica,Kingston,Jamaica,876/658,EST
+877,Toll free,,All NANP,,
+878,Pennsylvania,Pittsburgh,USA,"412/878, 724/878",E
+879,Newfoundland and Labrador,St John's,Canada,709/879,N
+888,Toll free,,All NANP,,
+901,Tennessee,Memphis,USA,,C
+902,Nova Scotia-Prince Edward Island,Halifax,Canada,902/782,A
+903,Texas,Tyler,USA,903/430,C
+904,Florida,Jacksonville,USA,904/324,E
+905,Ontario,Mississauga,Canada,905/289/365/742,E
+906,Michigan,Marquette,USA,,"E,C"
+907,Alaska,Anchorage,USA,,"AK,H"
+908,New Jersey,Elizabeth,USA,,E
+909,California,San Bernardino,USA,909/840,P
+910,North Carolina,Fayetteville,USA,910/472,E
+912,Georgia,Savannah,USA,,E
+913,Kansas,Overland Park,USA,,C
+914,New York,Yonkers,USA,,E
+915,Texas,El Paso,USA,,"M,C"
+916,California,Sacramento,USA,916/279,P
+917,New York,NYC Manhattan,USA,"212/646/917/332, 718/347/917/929",E
+918,Oklahoma,Tulsa,USA,918/539,C
+919,North Carolina,Raleigh,USA,919/984,E
+920,Wisconsin,Green Bay,USA,920/274,C
+925,California,Concord,USA,,P
+928,Arizona,Yuma,USA,,"MST,M"
+929,New York,New York,USA,718/347/917/929,E
+930,Indiana,Evansville,USA,812/930,"E,C"
+931,Tennessee,Clarksville,USA,,"E,C"
+934,New York,Brentwood,USA,631/934,E
+936,Texas,Conroe,USA,,C
+937,Ohio,Dayton,USA,937/326,E
+938,Alabama,Huntsville,USA,256/938,C
+939,Puerto Rico,San Juan,Puerto Rico,787/939,AST
+940,Texas,Denton,USA,,C
+941,Florida,North Port,USA,,E
+943,Georgia,Atlanta,USA,"404/678/470/943, 770/678/470/943",E
+945,Texas,Dallas,USA,214/972/469/945,C
+947,Michigan,Troy,USA,248/947,E
+948,Virginia,Virginia Beach,USA,757/948,E
+949,California,Irvine,USA,,P
+951,California,Riverside,USA,,P
+952,Minnesota,Lakeville,USA,,C
+954,Florida,Fort Lauderdale,USA,954/754,E
+956,Texas,Laredo,USA,,C
+959,Connecticut,Hartford,USA,860/959,E
+970,Colorado,Fort Collins,USA,,M
+971,Oregon,Portland,USA,503/971,P
+972,Texas,Dallas,USA,214/972/469/945,C
+973,New Jersey,Newark,USA,973/862,E
+975,Missouri,Kansas City,USA,816/975,C
+978,Massachusetts,Lowell,USA,978/351,E
+979,Texas,College Station,USA,,C
+980,North Carolina,Charlotte,USA,704/980,E
+983,Colorado,Denver,USA,303/720/983,M
+984,North Carolina,Raleigh,USA,919/984,E
+985,Louisiana,Houma,USA,,C
+986,Idaho,Meridian,USA,208/986,"M,P"
+989,Michigan,Saginaw,USA,,E
