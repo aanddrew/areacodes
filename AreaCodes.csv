@@ -1,4 +1,4 @@
-Area Code,"State, etc.",Main City,Country,Overlay Complex,Time Zone
+area_code,state,main_city,country,overlay_complex,time_zone
 201,New Jersey,Jersey City,USA,201/551,E
 202,D.C.,Washington,USA,202/771,E
 203,Connecticut,Bridgeport,USA,203/475,E
