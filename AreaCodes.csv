@@ -1,6 +1,6 @@
 area_code,state,main_city,country,overlay_complex,time_zone
 201,New Jersey,Jersey City,USA,201/551,E
-202,D.C.,Washington,USA,202/771,E
+202,District of Columbia,Washington,USA,202/771,E
 203,Connecticut,Bridgeport,USA,203/475,E
 204,Manitoba,Winnipeg,Canada,204/431/584,C
 205,Alabama,Birmingham,USA,205/659,C
@@ -9,7 +9,7 @@ area_code,state,main_city,country,overlay_complex,time_zone
 208,Idaho,Meridian,USA,208/986,"M,P"
 209,California,Stockton,USA,209/350,P
 210,Texas,San Antonio,USA,210/726,C
-212,New York,NYC Manhattan,USA,212/646/917/332,E
+212,New York,New York,USA,212/646/917/332,E
 213,California,Los Angeles,USA,323/213,P
 214,Texas,Dallas,USA,214/972/469/945,C
 215,Pennsylvania,Philadelphia,USA,215/267/445,E
@@ -67,17 +67,16 @@ area_code,state,main_city,country,overlay_complex,time_zone
 308,Nebraska,Grand Island,USA,,"C,M"
 309,Illinois,Peoria,USA,309/861,C
 310,California,Torrance,USA,310/424,P
-312,Illinois,Chicago Downtown,USA,312/872,C
+312,Illinois,Chicago,USA,312/872,C
 313,Michigan,Detroit,USA,,E
-314,Missouri,St Louis,USA,314/557,C
+314,Missouri,St. Louis,USA,314/557,C
 315,New York,Syracuse,USA,315/680,E
 316,Kansas,Wichita,USA,,C
 317,Indiana,Indianapolis,USA,317/463,E
 318,Louisiana,Shreveport,USA,,C
 319,Iowa,Cedar Rapids,USA,,C
-320,Minnesota,St Cloud,USA,,C
+320,Minnesota,St. Cloud,USA,,C
 321,Florida,Orlando,USA,"407/321/689,321",E
-321,Florida,Palm Bay,USA,,E
 323,California,Los Angeles,USA,323/213,P
 324,Florida,Jacksonville,USA,904/324,E
 325,Texas,Abilene,USA,,C
@@ -86,7 +85,7 @@ area_code,state,main_city,country,overlay_complex,time_zone
 329,New York,New City,USA,845/329,E
 330,Ohio,Akron,USA,330/234,E
 331,Illinois,Aurora,USA,630/331,C
-332,New York,NYC Manhattan,USA,212/646/917/332,E
+332,New York,New York,USA,212/646/917/332,E
 334,Alabama,Montgomery,USA,,C
 336,North Carolina,Greensboro,USA,336/743,E
 337,Louisiana,Lafayette,USA,,C
@@ -141,7 +140,7 @@ area_code,state,main_city,country,overlay_complex,time_zone
 431,Manitoba,Winnipeg,Canada,204/431/584,C
 432,Texas,Midland,USA,,C
 434,Virginia,Lynchburg,USA,,E
-435,Utah,St George,USA,,M
+435,Utah,St. George,USA,,M
 436,Ohio,Lorain,USA,440/436,E
 437,Ontario,Toronto,Canada,416/647/437,E
 438,Quebec,Montreal,Canada,514/438/263,E
@@ -194,7 +193,7 @@ area_code,state,main_city,country,overlay_complex,time_zone
 541,Oregon,Eugene,USA,541/458,"M,P"
 548,Ontario,London,Canada,519/226/548/382,E
 551,New Jersey,Jersey City,USA,201/551,E
-557,Missouri,St Louis,USA,314/557,C
+557,Missouri,St. Louis,USA,314/557,C
 559,California,Fresno,USA,559/357,P
 561,Florida,West Palm Beach,USA,561/728,E
 562,California,Long Beach,USA,,P
@@ -247,11 +246,11 @@ area_code,state,main_city,country,overlay_complex,time_zone
 640,New Jersey,Trenton,USA,609/640,E
 641,Iowa,Mason City,USA,,C
 645,Florida,Miami,USA,305/786/645,E
-646,New York,NYC Manhattan,USA,212/646/917/332,E
+646,New York,New York,USA,212/646/917/332,E
 647,Ontario,Toronto,Canada,416/647/437,E
 649,Turks and Caicos,Honda Road,Turks and Caicos,,E
 650,California,Daly City,USA,,P
-651,Minnesota,St Paul,USA,,C
+651,Minnesota,St. Paul,USA,,C
 656,Florida,Tampa,USA,813/656,E
 657,California,Anaheim,USA,714/657,P
 658,Jamaica,Kingston,Jamaica,876/658,EST
@@ -281,7 +280,7 @@ area_code,state,main_city,country,overlay_complex,time_zone
 706,Georgia,Augusta,USA,706/762,E
 707,California,Santa Rosa,USA,707/369,P
 708,Illinois,Cicero,USA,708/464,C
-709,Newfoundland and Labrador,St John's,Canada,709/879,N
+709,Newfoundland and Labrador,St. John's,Canada,709/879,N
 712,Iowa,Sioux City,USA,,C
 713,Texas,Houston,USA,713/281/832/346/621,C
 714,California,Anaheim,USA,714/657,P
@@ -295,7 +294,7 @@ area_code,state,main_city,country,overlay_complex,time_zone
 724,Pennsylvania,New Castle,USA,724/878,E
 725,Nevada,Las Vegas,USA,702/725,P
 726,Texas,San Antonio,USA,210/726,C
-727,Florida,St Petersburg,USA,,E
+727,Florida,St. Petersburg,USA,,E
 728,Florida,West Palm Beach,USA,561/728,E
 730,Illinois,Belleville,USA,618/730,C
 731,Tennessee,Jackson,USA,,C
@@ -317,8 +316,8 @@ area_code,state,main_city,country,overlay_complex,time_zone
 767,Dominica,Roseau,Dominica,,AST
 769,Mississippi,Jackson,USA,601/769,C
 770,Georgia,Roswell,USA,770/678/470/943,E
-771,D.C.,Washington,USA,202/771,E
-772,Florida,Port St Lucie,USA,,E
+771,District of Columbia,Washington,USA,202/771,E
+772,Florida,Port St. Lucie,USA,,E
 773,Illinois,Chicago,USA,773/872,C
 774,Massachusetts,Norfolk,USA,508/774,E
 775,Nevada,Reno,USA,,P
@@ -333,7 +332,7 @@ area_code,state,main_city,country,overlay_complex,time_zone
 787,Puerto Rico,San Juan,Puerto Rico,787/939,AST
 800,Toll free,,All NANP,,
 801,Utah,Salt Lake City,USA,801/385,M
-802,Vermont,Woodbury,USA,,E
+802,Vermont,Burlington,USA,,E
 803,South Carolina,Columbia,USA,803/839,E
 804,Virginia,Richmond,USA,804/686,E
 805,California,Oxnard,USA,805/820,P
@@ -389,12 +388,12 @@ area_code,state,main_city,country,overlay_complex,time_zone
 868,Trinidad and Tobago,Chaguanas,Trinidad and Tobago,,AST
 869,Saint Kitts and Nevis,Basseterre,Saint Kitts and Nevis,,AST
 870,Arkansas,Jonesboro,USA,870/327,C
-872,Illinois,Chicago Downtown,USA,"312/872, 773/872",C
+872,Illinois,Chicago,USA,"312/872, 773/872",C
 873,Quebec,Gatineau,Canada,819/873/468,E
 876,Jamaica,Kingston,Jamaica,876/658,EST
 877,Toll free,,All NANP,,
 878,Pennsylvania,Pittsburgh,USA,"412/878, 724/878",E
-879,Newfoundland and Labrador,St John's,Canada,709/879,N
+879,Newfoundland and Labrador,St. John's,Canada,709/879,N
 888,Toll free,,All NANP,,
 901,Tennessee,Memphis,USA,,C
 902,Nova Scotia-Prince Edward Island,Halifax,Canada,902/782,A
@@ -411,7 +410,7 @@ area_code,state,main_city,country,overlay_complex,time_zone
 914,New York,Yonkers,USA,,E
 915,Texas,El Paso,USA,,"M,C"
 916,California,Sacramento,USA,916/279,P
-917,New York,NYC Manhattan,USA,"212/646/917/332, 718/347/917/929",E
+917,New York,New York,USA,"212/646/917/332, 718/347/917/929",E
 918,Oklahoma,Tulsa,USA,918/539,C
 919,North Carolina,Raleigh,USA,919/984,E
 920,Wisconsin,Green Bay,USA,920/274,C
