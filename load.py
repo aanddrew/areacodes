@@ -265,7 +265,7 @@ df_points = pd.read_sql("""
         lat,
         lng 
     FROM area_code_cities 
-    WHERE lat BETWEEN 23.891128 AND 50.0490684
+    WHERE lat BETWEEN 23.891128 AND 49.0490684
       AND lng BETWEEN -127.079265 AND -61.470050
     ORDER BY state, main_city
 """, con)
@@ -310,13 +310,19 @@ class KDTreeBox:
     def __str__(self):
         return f"{self.nodes}, {self.box}"
 
+class Axis(Enum):
+    X = 'x',
+    Y = 'y'
+
 class KDTree:
     children: List["KDTree"]
     box: KDTreeBox
+    split_axis: Axis
 
-    def __init__(self, children: List["KDTree"], box: KDTreeBox):
+    def __init__(self, children: List["KDTree"], box: KDTreeBox, split_axis: Axis):
         self.box = box
         self.children = children
+        self.split_axis = split_axis
 
     def is_leaf(self) -> bool:
         return len(self.children) == 0
@@ -324,10 +330,6 @@ class KDTree:
 city_nodes: List[Node] = []
 for index, row in df_points.iterrows():
     city_nodes.append(Node(row['lng'], row['lat'], row['main_city']))
-
-class Axis(Enum):
-    X = 'x',
-    Y = 'y'
 
 def split(nodes: List[Node], bounding_box: Box, axis: Axis=Axis.X) -> List[KDTreeBox]:
     def get_x(node: Node):
@@ -376,20 +378,21 @@ def split(nodes: List[Node], bounding_box: Box, axis: Axis=Axis.X) -> List[KDTre
 
 def tree_build(nodes: List[Node], bounding_box: Box, split_axis: Axis = Axis.X) -> KDTree:
     if len(nodes) == 1:
-        return KDTree([], KDTreeBox(nodes[0], bounding_box))
+        return KDTree([], KDTreeBox([nodes[0]], bounding_box), split_axis)
 
     halves = split(nodes, bounding_box, split_axis)
+    new_split_axis = split_axis
     if split_axis == Axis.X:
-        split_axis = Axis.Y
+        new_split_axis = Axis.Y
     elif split_axis == Axis.Y:
-        split_axis = Axis.X
+        new_split_axis = Axis.X
 
     half_trees = [
-        tree_build(halves[0].nodes, halves[0].box, split_axis),
-        tree_build(halves[1].nodes, halves[1].box, split_axis)
+        tree_build(halves[0].nodes, halves[0].box, new_split_axis),
+        tree_build(halves[1].nodes, halves[1].box, new_split_axis)
     ]
 
-    return KDTree(half_trees, bounding_box)
+    return KDTree(children=half_trees, box=KDTreeBox(nodes, bounding_box), split_axis=split_axis)
 
 min_x = np.min([node.x for node in city_nodes])
 max_x = np.max([node.x for node in city_nodes])
@@ -397,29 +400,90 @@ min_y = np.min([node.y for node in city_nodes])
 max_y = np.max([node.y for node in city_nodes])
 tree = tree_build(city_nodes, Box(min_x, max_x, min_y, max_y))
 
-def pre_order_traverse(root: KDTree) -> List[KDTreeBox]:
+def pre_order_traverse(root: KDTree, level) -> List[KDTreeBox]:
     if root.is_leaf():
+        return [root.box]
+    
+    check_tree = root
+    check_level = level
+    while check_level > 0 and not check_tree.is_leaf():
+        check_tree = check_tree.children[0]
+        check_level -= 1
+
+    if check_tree.is_leaf():
         return [root.box]
 
     boxes = [] 
     for child in root.children:
-        boxes += pre_order_traverse(child) 
+        boxes += pre_order_traverse(child, level) 
 
     return boxes
 
-leaves = pre_order_traverse(tree)
-with open("polygons.csv", "w", newline='') as file:
-    file.write("WKT,name\n")
-    for leaf in leaves:
-        points_string = ""
-        points_string += f"{leaf.box.left:.7f} {leaf.box.top:.7f}, "
-        points_string += f"{leaf.box.left:.7f} {leaf.box.bot:.7f}, "
-        points_string += f"{leaf.box.right:.7f} {leaf.box.bot:.7f}, "
-        points_string += f"{leaf.box.right:.7f} {leaf.box.top:.7f}, "
-        points_string += f"{leaf.box.left:.7f} {leaf.box.top:.7f}" # same as start
+for level in range(6):
+    leaves = pre_order_traverse(tree, level)
+    with open(f"polygons/polygons_level{level}.csv", "w", newline='') as file:
+        file.write("WKT,name\n")
+        for leaf in leaves:
+            points_string = ""
+            points_string += f"{leaf.box.left:.7f} {leaf.box.top:.7f}, "
+            points_string += f"{leaf.box.left:.7f} {leaf.box.bot:.7f}, "
+            points_string += f"{leaf.box.right:.7f} {leaf.box.bot:.7f}, "
+            points_string += f"{leaf.box.right:.7f} {leaf.box.top:.7f}, "
+            points_string += f"{leaf.box.left:.7f} {leaf.box.top:.7f}" # same as start
 
-        polygon_string = f"\"POLYGON (({points_string}))\",\"{leaf.nodes.name}\"\n"
-        file.write(polygon_string)
-        file.write(f"\"POINT ({leaf.nodes.x:.7f} {leaf.nodes.y:.7f})\",\"{leaf.nodes.name} city\"\n")
+            polygon_string = f"\"POLYGON (({points_string}))\",\"{leaf.nodes[0].name}\"\n"
+            file.write(polygon_string)
+            file.write(f"\"POINT ({leaf.nodes[0].x:.7f} {leaf.nodes[0].y:.7f})\",\"{leaf.nodes[0].name} city\"\n")
+
+class Direction(Enum):
+    Left = 'left'
+    Right = 'right'
+    Up = 'up'
+    Down = 'down'
+
+def traverse(tree: KDTree, from_direction: Direction, to_direction: Direction) -> List[KDTreeBox]:
+    if tree.is_leaf():
+        return [tree.box]
+    
+    LEFT_INDEX = 0
+    RIGHT_INDEX = 1
+    BOT_INDEX = 0
+    TOP_INDEX = 1
+
+    if tree.split_axis == Axis.X:
+        if from_direction == Direction.Left:
+            return traverse(tree.children[LEFT_INDEX], Direction.Left, Direction.Right) \
+                 + traverse(tree.children[RIGHT_INDEX], Direction.Left, to_direction)
+        elif from_direction == Direction.Right:
+            return traverse(tree.children[RIGHT_INDEX], Direction.Right, Direction.Left) \
+                 + traverse(tree.children[LEFT_INDEX], Direction.Right, to_direction)
+        elif from_direction == Direction.Down:
+            return traverse(tree.children[LEFT_INDEX], Direction.Down, Direction.Right) \
+                 + traverse(tree.children[RIGHT_INDEX], Direction.Left, to_direction)
+        elif from_direction == Direction.Up:
+            return traverse(tree.children[LEFT_INDEX], Direction.Up, Direction.Right) \
+                 + traverse(tree.children[RIGHT_INDEX], Direction.Left, to_direction)
+    if tree.split_axis == Axis.Y:
+        if from_direction == Direction.Down:
+            return traverse(tree.children[BOT_INDEX], Direction.Down, Direction.Up) \
+                 + traverse(tree.children[TOP_INDEX], Direction.Down, to_direction)
+        elif from_direction == Direction.Up:
+            return traverse(tree.children[BOT_INDEX], Direction.Up, Direction.Down) \
+                 + traverse(tree.children[TOP_INDEX], Direction.Up, to_direction)
+        elif from_direction == Direction.Left:
+            return traverse(tree.children[TOP_INDEX], Direction.Left, Direction.Down) \
+                 + traverse(tree.children[BOT_INDEX], Direction.Up, to_direction)
+        elif from_direction == Direction.Right:
+            return traverse(tree.children[TOP_INDEX], Direction.Right, Direction.Down) \
+                 + traverse(tree.children[BOT_INDEX], Direction.Up, to_direction)
+
+route = traverse(tree, Direction.Left, Direction.Right)
+with open("route.csv", "w", newline='') as file:
+    file.write("WKT,name\n")
+    for i in range(len(route) - 1):
+        start = route[i]
+        end = route[i + 1]
+        file.write(f"\"LINESTRING ({start.nodes[0].x:.7f} {start.nodes[0].y:.7f}, {end.nodes[0].x:.7f} {end.nodes[0].y:.7f})\",\"{start.nodes[0].name}\"\n")
+
 
 con.close()
