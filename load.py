@@ -420,5 +420,6 @@ with open("polygons.csv", "w", newline='') as file:
 
         polygon_string = f"\"POLYGON (({points_string}))\",\"{leaf.nodes.name}\"\n"
         file.write(polygon_string)
+        file.write(f"\"POINT ({leaf.nodes.x:.7f} {leaf.nodes.y:.7f})\",\"{leaf.nodes.name} city\"\n")
 
 con.close()
