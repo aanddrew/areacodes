@@ -1,7 +1,10 @@
 import pandas as pd
+import numpy as np
 import re
 import sqlite3
 import itertools as it
+from typing import List
+from enum import Enum
 
 con = sqlite3.connect("words.db")
 
@@ -253,6 +256,169 @@ def get_region(row):
 df_area_code_cities = pd.read_sql("SELECT * FROM area_code_cities", con)
 df_area_code_cities['region'] = df_area_code_cities.apply(get_region, axis=1)
 df_area_code_cities.to_sql('area_code_cities', con, if_exists='replace', index=False)
-print(df_area_code_cities)
+# print(df_area_code_cities)
+
+df_points = pd.read_sql("""
+    SELECT DISTINCT 
+        state, 
+        main_city, 
+        lat,
+        lng 
+    FROM area_code_cities 
+    WHERE lat BETWEEN 23.891128 AND 50.0490684
+      AND lng BETWEEN -127.079265 AND -61.470050
+    ORDER BY state, main_city
+""", con)
+df_points.to_csv('points.csv', index=False)
+
+class Node:
+    x: float
+    y: float
+    name: str
+
+    def __init__(self, x: float, y: float, name: str = ""):
+        self.x = x
+        self.y = y
+        self.name = name
+    
+    def __str__(self):
+        return f"{self.name, self.x, self.y}"
+
+class Box:
+    left: float
+    right: float
+    bot: float
+    top: float
+
+    def __init__(self, left: float, right: float, bot: float, top: float):
+        self.left = left
+        self.right = right
+        self.bot = bot
+        self.top = top
+
+    def __str__(self):
+        return f"(l: {self.left:.7f}, r: {self.right:.7f}, b: {self.bot:.7f}, t: {self.top:.7f}"
+    
+class KDTreeBox:
+    nodes: List[Node]
+    box: Box
+
+    def __init__(self, nodes: List[Node], box: Box):
+        self.nodes = nodes
+        self.box = box
+
+    def __str__(self):
+        return f"{self.nodes}, {self.box}"
+
+class KDTree:
+    children: List["KDTree"]
+    box: KDTreeBox
+
+    def __init__(self, children: List["KDTree"], box: KDTreeBox):
+        self.box = box
+        self.children = children
+
+    def is_leaf(self) -> bool:
+        return len(self.children) == 0
+
+city_nodes: List[Node] = []
+for index, row in df_points.iterrows():
+    city_nodes.append(Node(row['lng'], row['lat'], row['main_city']))
+
+class Axis(Enum):
+    X = 'x',
+    Y = 'y'
+
+def split(nodes: List[Node], bounding_box: Box, axis: Axis=Axis.X) -> List[KDTreeBox]:
+    def get_x(node: Node):
+        return node.x
+    def get_y(node: Node):
+        return node.y
+
+    get_val = get_x
+    if axis == Axis.Y:
+        get_val = get_y
+
+    min_val = np.min([get_val(node) for node in nodes])
+    max_val = np.max([get_val(node) for node in nodes])
+    split_val = (min_val + max_val) / 2
+
+    left = []
+    right = []
+    even_split = False
+    while not even_split:
+        left  = [node for node in nodes if get_val(node) < split_val]
+        right = [node for node in nodes if get_val(node) >= split_val]
+
+        # we can have up to 2 more in either side :shrug:
+        if abs(len(left) - len(right)) < 2:
+            even_split = True
+        else:
+            if len(left) > len(right):
+                max_val = split_val
+                split_val = (min_val + split_val) / 2
+            else:
+                min_val = split_val
+                split_val = (max_val + split_val) / 2
+    
+    min_x = bounding_box.left
+    max_x = bounding_box.right
+    min_y = bounding_box.bot
+    max_y = bounding_box.top
+    if axis == Axis.X:
+        left_box  = KDTreeBox(left,  Box(min_x, split_val, min_y, max_y))
+        right_box = KDTreeBox(right, Box(split_val, max_x, min_y, max_y))
+        return [left_box, right_box]
+    elif axis == Axis.Y:
+        bot_box = KDTreeBox(left,  Box(min_x, max_x, min_y, split_val))
+        top_box = KDTreeBox(right, Box(min_x, max_x, split_val, max_y))
+        return [bot_box, top_box]
+
+def tree_build(nodes: List[Node], bounding_box: Box, split_axis: Axis = Axis.X) -> KDTree:
+    if len(nodes) == 1:
+        return KDTree([], KDTreeBox(nodes[0], bounding_box))
+
+    halves = split(nodes, bounding_box, split_axis)
+    if split_axis == Axis.X:
+        split_axis = Axis.Y
+    elif split_axis == Axis.Y:
+        split_axis = Axis.X
+
+    half_trees = [
+        tree_build(halves[0].nodes, halves[0].box, split_axis),
+        tree_build(halves[1].nodes, halves[1].box, split_axis)
+    ]
+
+    return KDTree(half_trees, bounding_box)
+
+min_x = np.min([node.x for node in city_nodes])
+max_x = np.max([node.x for node in city_nodes])
+min_y = np.min([node.y for node in city_nodes])
+max_y = np.max([node.y for node in city_nodes])
+tree = tree_build(city_nodes, Box(min_x, max_x, min_y, max_y))
+
+def pre_order_traverse(root: KDTree) -> List[KDTreeBox]:
+    if root.is_leaf():
+        return [root.box]
+
+    boxes = [] 
+    for child in root.children:
+        boxes += pre_order_traverse(child) 
+
+    return boxes
+
+leaves = pre_order_traverse(tree)
+with open("polygons.csv", "w", newline='') as file:
+    file.write("WKT,name\n")
+    for leaf in leaves:
+        points_string = ""
+        points_string += f"{leaf.box.left:.7f} {leaf.box.top:.7f}, "
+        points_string += f"{leaf.box.left:.7f} {leaf.box.bot:.7f}, "
+        points_string += f"{leaf.box.right:.7f} {leaf.box.bot:.7f}, "
+        points_string += f"{leaf.box.right:.7f} {leaf.box.top:.7f}, "
+        points_string += f"{leaf.box.left:.7f} {leaf.box.top:.7f}" # same as start
+
+        polygon_string = f"\"POLYGON (({points_string}))\",\"{leaf.nodes.name}\"\n"
+        file.write(polygon_string)
 
 con.close()
