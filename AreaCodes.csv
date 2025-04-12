@@ -304,7 +304,7 @@ area_code,state,main_city,country,overlay_complex,time_zone
 740,Ohio,Newark,USA,740/220,E
 742,Ontario,Mississauga,Canada,905/289/365/742,E
 743,North Carolina,Greensboro,USA,336/743,E
-747,California,Glendale,USA,818/747,P
+747,California,San Fernando,USA,818/747,P
 753,Ontario,Ottawa,Canada,613/343/753,E
 754,Florida,Fort Lauderdale,USA,954/754,E
 757,Virginia,Virginia Beach,USA,757/948,E
@@ -347,7 +347,7 @@ area_code,state,main_city,country,overlay_complex,time_zone
 815,Illinois,Joliet,USA,815/779,C
 816,Missouri,Kansas City,USA,816/975,C
 817,Texas,Fort Worth,USA,817/682,C
-818,California,Glendale,USA,818/747,P
+818,California,San Fernando,USA,818/747,P
 819,Quebec,Gatineau,Canada,819/873/468,E
 820,California,Oxnard,USA,805/820,P
 821,South Carolina,Greenville,USA,864/821,E

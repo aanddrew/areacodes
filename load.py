@@ -141,15 +141,6 @@ df_area_code_cities = pd.read_sql(
     );
 """, con)
 
-regions = [
-    {
-        'region_name': 'socal', 
-        'min_lat': 31.102211,
-        'min_lng': -122.5721339,
-        'max_lat': 35.655639, 
-        'max_lng': -115.732556
-    }
-]
 
 df_area_code_cities.to_sql('area_code_cities', con, if_exists="replace", index=False)
 
@@ -224,6 +215,44 @@ def get_words_from_parts_from_row(row):
 
 # print(df_area_code_phonics_parts)
 
+# pd.read_sql("""
+# -- DELETE FROM area_code_words WHERE LENGTH(parts) == 3 AND words IS NULL;
+# 
+# -- WITH three_letter_words AS (
+# --   SELECT acw.area_code, acw.phonics, acw.parts, w.word AS words 
+# --   FROM area_code_words acw
+# --   LEFT JOIN words w ON acw.phonics = w.cleaned
+# --   WHERE 
+# --     LENGTH(acw.parts) = 3
+# --     AND w.count > 2000000
+# -- )
+# -- INSERT INTO area_code_words
+# -- SELECT * FROM three_letter_words;
+# """, con)
 
+
+rect_regions = [
+    {
+        'name': 'socal', 
+        'min_lat': 31.102211,
+        'min_lng': -122.5721339,
+        'max_lat': 35.655639, 
+        'max_lng': -115.732556
+    }
+]
+
+def get_region(row):
+    for region in rect_regions: 
+        if (row['lat'] >= region['min_lat'] and
+            row['lat'] <= region['max_lat'] and
+            row['lng'] >= region['min_lng'] and
+            row['lng'] <= region['max_lng']):
+            return region['name']
+    return ''
+
+df_area_code_cities = pd.read_sql("SELECT * FROM area_code_cities", con)
+df_area_code_cities['region'] = df_area_code_cities.apply(get_region, axis=1)
+df_area_code_cities.to_sql('area_code_cities', con, if_exists='replace', index=False)
+print(df_area_code_cities)
 
 con.close()
