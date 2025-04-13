@@ -267,6 +267,7 @@ df_points = pd.read_sql("""
     FROM area_code_cities 
     WHERE lat BETWEEN 23.891128 AND 49.0490684
       AND lng BETWEEN -127.079265 AND -61.470050
+      AND state NOT IN ('Ontario', 'Quebec')
     ORDER BY state, main_city
 """, con)
 df_points.to_csv('points.csv', index=False)
@@ -331,7 +332,7 @@ city_nodes: List[Node] = []
 for index, row in df_points.iterrows():
     city_nodes.append(Node(row['lng'], row['lat'], row['main_city']))
 
-def split(nodes: List[Node], bounding_box: Box, axis: Axis=Axis.X) -> List[KDTreeBox]:
+def split(nodes: List[Node], bounding_box: Box, axis: Axis=Axis.Y) -> List[KDTreeBox]:
     def get_x(node: Node):
         return node.x
     def get_y(node: Node):
@@ -398,7 +399,7 @@ min_x = np.min([node.x for node in city_nodes])
 max_x = np.max([node.x for node in city_nodes])
 min_y = np.min([node.y for node in city_nodes])
 max_y = np.max([node.y for node in city_nodes])
-tree = tree_build(city_nodes, Box(min_x, max_x, min_y, max_y))
+tree = tree_build(city_nodes, Box(min_x, max_x, min_y, max_y), split_axis=Axis.X)
 
 def pre_order_traverse(root: KDTree, level) -> List[KDTreeBox]:
     if root.is_leaf():
@@ -450,32 +451,79 @@ def traverse(tree: KDTree, from_direction: Direction, to_direction: Direction) -
     BOT_INDEX = 0
     TOP_INDEX = 1
 
+    first = []
+    last = []
+
     if tree.split_axis == Axis.X:
         if from_direction == Direction.Left:
-            return traverse(tree.children[LEFT_INDEX], Direction.Left, Direction.Right) \
-                 + traverse(tree.children[RIGHT_INDEX], Direction.Left, to_direction)
+            first = traverse(tree.children[LEFT_INDEX], Direction.Left, Direction.Right)
+            last  = traverse(tree.children[RIGHT_INDEX], Direction.Left, to_direction)
         elif from_direction == Direction.Right:
-            return traverse(tree.children[RIGHT_INDEX], Direction.Right, Direction.Left) \
-                 + traverse(tree.children[LEFT_INDEX], Direction.Right, to_direction)
+            first = traverse(tree.children[RIGHT_INDEX], Direction.Right, Direction.Left)
+            last  = traverse(tree.children[LEFT_INDEX], Direction.Right, to_direction)
         elif from_direction == Direction.Down:
-            return traverse(tree.children[LEFT_INDEX], Direction.Down, Direction.Right) \
-                 + traverse(tree.children[RIGHT_INDEX], Direction.Left, to_direction)
+            first = traverse(tree.children[LEFT_INDEX], Direction.Down, Direction.Right)
+            last  = traverse(tree.children[RIGHT_INDEX], Direction.Left, to_direction)
         elif from_direction == Direction.Up:
-            return traverse(tree.children[LEFT_INDEX], Direction.Up, Direction.Right) \
-                 + traverse(tree.children[RIGHT_INDEX], Direction.Left, to_direction)
+            first = traverse(tree.children[LEFT_INDEX], Direction.Up, Direction.Right)
+            last  = traverse(tree.children[RIGHT_INDEX], Direction.Left, to_direction)
     if tree.split_axis == Axis.Y:
         if from_direction == Direction.Down:
-            return traverse(tree.children[BOT_INDEX], Direction.Down, Direction.Up) \
-                 + traverse(tree.children[TOP_INDEX], Direction.Down, to_direction)
+            first = traverse(tree.children[BOT_INDEX], Direction.Down, Direction.Up)
+            last  = traverse(tree.children[TOP_INDEX], Direction.Down, to_direction)
         elif from_direction == Direction.Up:
-            return traverse(tree.children[BOT_INDEX], Direction.Up, Direction.Down) \
-                 + traverse(tree.children[TOP_INDEX], Direction.Up, to_direction)
+            first = traverse(tree.children[BOT_INDEX], Direction.Up, Direction.Down)
+            last  = traverse(tree.children[TOP_INDEX], Direction.Up, to_direction)
         elif from_direction == Direction.Left:
-            return traverse(tree.children[TOP_INDEX], Direction.Left, Direction.Down) \
-                 + traverse(tree.children[BOT_INDEX], Direction.Up, to_direction)
+            first = traverse(tree.children[TOP_INDEX], Direction.Left, Direction.Down)
+            last  = traverse(tree.children[BOT_INDEX], Direction.Up, to_direction)
         elif from_direction == Direction.Right:
-            return traverse(tree.children[TOP_INDEX], Direction.Right, Direction.Down) \
-                 + traverse(tree.children[BOT_INDEX], Direction.Up, to_direction)
+            first = traverse(tree.children[TOP_INDEX], Direction.Right, Direction.Down)
+            last  = traverse(tree.children[BOT_INDEX], Direction.Up, to_direction)
+
+    def score_4_points(points):
+        vec1 = (points[0][0] - points[1][0], points[0][1] - points[1][1])
+        vec2 = (points[2][0] - points[1][0], points[2][1] - points[1][1])
+
+        vec3 = (points[1][0] - points[2][0], points[1][1] - points[2][1])
+        vec4 = (points[3][0] - points[2][0], points[3][1] - points[2][1])
+
+        dot1 = (vec1[0] * vec2[0]) + (vec1[1] * vec2[1])
+        dot2 = (vec1[0] * vec2[0]) + (vec1[1] * vec2[1])
+
+        return dot1 + dot2
+
+    def rotate(route: List[KDTreeBox]):
+        if len(route) >= 4:
+            for i in range(1, len(route) - 2):
+                points = [
+                    [route[i-1].nodes[0].x, route[i-1].nodes[0].y],
+                    [route[i].nodes[0].x, route[i].nodes[0].y],
+                    [route[i+1].nodes[0].x, route[i+1].nodes[0].y],
+                    [route[i+2].nodes[0].x, route[i+2].nodes[0].y]
+                ]
+                score_unswapped = score_4_points(points)
+
+                temp_point = points[1]
+                points[1] = points[2]
+                points[2] = temp_point
+
+                score_swapped = score_4_points(points)
+
+                if score_swapped < score_unswapped:
+                    temp_node = route[i]
+                    route[i] = route[i + 1]
+                    route[i + 1] = temp_node
+
+    rotate(first)
+    rotate(last)
+
+    route = first + last + [first[0]]
+
+    rotate(route)
+    route = route[:-1]
+
+    return route
 
 route = traverse(tree, Direction.Left, Direction.Right)
 with open("route.csv", "w", newline='') as file:
@@ -484,6 +532,5 @@ with open("route.csv", "w", newline='') as file:
         start = route[i]
         end = route[i + 1]
         file.write(f"\"LINESTRING ({start.nodes[0].x:.7f} {start.nodes[0].y:.7f}, {end.nodes[0].x:.7f} {end.nodes[0].y:.7f})\",\"{start.nodes[0].name}\"\n")
-
 
 con.close()
