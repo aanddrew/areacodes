@@ -1,3 +1,11 @@
+###
+### This file 
+### 1. assembles the words.db database, 
+### 2. outputs the route.csv file to be imported into google maps 
+### 
+### Any other files in this raw/ subfolder are inputs to this file.
+### We only need to do this once :D unless we do it for other countries/areas lol
+
 import pandas as pd
 import numpy as np
 import re
