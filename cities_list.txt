@@ -1,0 +1,23 @@
+1 Seattle
+2 Topeka
+3 Chico
+4 Fresno
+5 Riverside
+6 Laredo
+7 Denton
+8 Beaumont
+9 Springfield
+10 Davenport
+11 Marquette
+12 Chicago
+13 Toledo
+14 Lorain
+15 Portland
+16 Binghamton
+17 New York
+18 Philadelphia
+19 Richmond
+20 Bowling Green
+21 Columbia
+22 Montgomery
+23 Cape Coral

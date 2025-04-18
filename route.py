@@ -147,4 +147,16 @@ with open("song.txt", "w") as file:
             file.write(', ')
         i += 1
 
+song_codes = song_df['area_code'].to_list()
+print(song_codes)
+with open("codes.txt", "w") as file:
+    for code in song_codes:
+        file.write(str(code))
+        file.write(' ')
+
+with open("codes_lines.txt", "w") as file:
+    for code in song_codes:
+        file.write(str(code))
+        file.write('\n')
+
 con.close()
