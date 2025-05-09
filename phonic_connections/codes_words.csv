@@ -1,0 +1,362 @@
+song_index,area_code,word,state,city,word_address
+0,206,kneesage,Washington,Seattle,1.1.1.1
+1,425,renewal,Washington,Bellevue,1.1.1.2
+2,253,nyholm,Washington,Tacoma,1.1.1.3
+3,360,images,Washington,Vancouver,1.1.1.4
+4,564,wilshire,Washington,Vancouver,1.1.2.1
+5,503,wholesome,Oregon,Portland,1.1.2.2
+6,971,pact,Oregon,Portland,1.1.2.3
+7,458,relief,Oregon,Eugene,1.1.2.4
+8,541,already,Oregon,Eugene,1.1.3.1
+9,509,lisp,Washington,Spokane,1.1.3.2
+10,208,unsafe,Idaho,Meridian,1.1.3.3
+11,986,peevish,Idaho,Meridian,1.1.3.4
+12,406,horseshoe,Montana,Billings,1.1.4.1
+13,701,cost,North Dakota,Fargo,1.1.4.2
+14,605,chisel,South Dakota,Sioux Falls,1.1.4.3
+15,308,massive,Nebraska,Grand Island,1.1.4.4
+16,785,gavel,Kansas,Topeka,1.2.1.1
+17,316,mouthwash,Kansas,Wichita,1.2.1.2
+18,620,agency,Kansas,Hutchinson,1.2.1.3
+19,719,goodbye,Colorado,Colorado Springs,1.2.1.4
+20,303,museum,Colorado,Denver,1.2.2.1
+21,720,gains,Colorado,Denver,1.2.2.2
+22,983,popham,Colorado,Denver,1.2.2.3
+23,970,because,Colorado,Fort Collins,1.2.2.4
+24,307,music,Wyoming,Cheyenne,1.2.3.1
+25,385,muffle,Utah,Salt Lake City,1.2.3.2
+26,801,visit,Utah,Salt Lake City,1.2.3.3
+27,435,warmly,Utah,St. George,1.2.3.4
+28,702,exxon,Nevada,Las Vegas,1.2.4.1
+29,725,canal,Nevada,Las Vegas,1.2.4.2
+30,775,quickly,Nevada,Reno,1.2.4.3
+31,530,williams,California,Chico,1.2.4.4
+32,837,foaming,California,Chico,1.3.1.1
+33,279,kneecap,California,Sacramento,1.3.1.2
+34,916,potash,California,Sacramento,1.3.1.3
+35,369,matchup,California,Santa Rosa,1.3.1.4
+36,707,causing,California,Santa Rosa,1.3.2.1
+37,415,retail,California,San Francisco,1.3.2.2
+38,628,geneva,California,San Francisco,1.3.2.3
+39,650,shells,California,Daly City,1.3.2.4
+40,341,married,California,Oakland,1.3.3.1
+41,510,holds,California,Oakland,1.3.3.2
+42,925,panel,California,Concord,1.3.3.3
+43,408,receive,California,San Jose,1.3.3.4
+44,669,JJB,California,San Jose,1.3.4.1
+45,209,unzip,California,Stockton,1.3.4.2
+46,350,miles,California,Stockton,1.3.4.3
+47,831,famed,California,Salinas,1.3.4.4
+48,357,milk,California,Fresno,1.4.1.1
+49,559,lullaby,California,Fresno,1.4.1.2
+50,661,judged,California,Bakersfield,1.4.1.3
+51,805,vessel,California,Oxnard,1.4.1.4
+52,820,venice,California,Oxnard,1.4.2.1
+53,747,growing,California,San Fernando,1.4.2.2
+54,818,votava,California,San Fernando,1.4.2.3
+55,213,anatomy,California,Los Angeles,1.4.2.4
+56,323,ammonium,California,Los Angeles,1.4.3.1
+57,310,meets,California,Torrance,1.4.3.2
+58,424,warner,California,Torrance,1.4.3.3
+59,626,change,California,Pasadena,1.4.3.4
+60,562,lotion,California,Long Beach,1.4.4.1
+61,949,probe,California,Irvine,1.4.4.2
+62,657,chilling,California,Anaheim,1.4.4.3
+63,714,ecuador,California,Anaheim,1.4.4.4
+64,951,build,California,Riverside,1.5.1.1
+65,840,force,California,San Bernardino,1.5.1.2
+66,909,busboy,California,San Bernardino,1.5.1.3
+67,442,rerun,California,Oceanside,1.5.1.4
+68,760,cautious,California,Oceanside,1.5.2.1
+69,619,washtub,California,San Diego,1.5.2.2
+70,858,volvo,California,San Diego,1.5.2.3
+71,928,bonavia,Arizona,Yuma,1.5.2.4
+72,480,revs,Arizona,Phoenix,1.5.3.1
+73,602,chosen,Arizona,Phoenix,1.5.3.2
+74,623,genome,Arizona,Phoenix,1.5.3.3
+75,520,loans,Arizona,Tucson,1.5.3.4
+76,505,wholesale,New Mexico,Albuquerque,1.5.4.1
+77,575,likely,New Mexico,Las Cruces,1.5.4.2
+78,915,battle,Texas,El Paso,1.5.4.3
+79,432,remain,Texas,Midland,1.5.4.4
+80,956,bullish,Texas,Laredo,1.6.1.1
+81,361,matched,Texas,Corpus Christi,1.6.1.2
+82,210,units,Texas,San Antonio,1.6.1.3
+83,726,coinage,Texas,San Antonio,1.6.1.4
+84,830,famous,Texas,New Braunfels,1.6.2.1
+85,512,latin,Texas,Austin,1.6.2.2
+86,737,coming,Texas,Austin,1.6.2.3
+87,254,nailer,Texas,Killeen,1.6.2.4
+88,325,mainly,Texas,Abilene,1.6.3.1
+89,806,visage,Texas,Lubbock,1.6.3.2
+90,580,leaves,Oklahoma,Lawton,1.6.3.3
+91,405,russell,Oklahoma,Oklahoma City,1.6.3.4
+92,572,lagoon,Oklahoma,Oklahoma City,1.6.4.1
+93,539,lamp,Oklahoma,Tulsa,1.6.4.2
+94,918,epitaph,Oklahoma,Tulsa,1.6.4.3
+95,479,rugby,Arkansas,Fort Smith,1.6.4.4
+96,940,price,Texas,Denton,2.1.1.1
+97,682,giovanni,Texas,Fort Worth,2.1.1.2
+98,817,voting,Texas,Fort Worth,2.1.1.3
+99,214,under,Texas,Dallas,2.1.1.4
+100,469,worship,Texas,Dallas,2.1.2.1
+101,945,april,Texas,Dallas,2.1.2.2
+102,972,began,Texas,Dallas,2.1.2.3
+103,430,arms,Texas,Tyler,2.1.2.4
+104,903,bosom,Texas,Tyler,2.1.3.1
+105,979,pickup,Texas,College Station,2.1.3.2
+106,281,nevada,Texas,Houston,2.1.3.3
+107,346,march,Texas,Houston,2.1.3.4
+108,621,joint,Texas,Houston,2.1.4.1
+109,713,academy,Texas,Houston,2.1.4.2
+110,832,hoffman,Texas,Houston,2.1.4.3
+111,936,beamish,Texas,Conroe,2.1.4.4
+112,409,recipe,Texas,Beaumont,2.2.1.1
+113,337,mimic,Louisiana,Lafayette,2.2.1.2
+114,225,nunley,Louisiana,Baton Rouge,2.2.1.3
+115,985,hopeful,Louisiana,Houma,2.2.1.4
+116,504,elsewhere,Louisiana,New Orleans,2.2.2.1
+117,228,nineveh,Mississippi,Gulfport,2.2.2.2
+118,251,unload,Alabama,Mobile,2.2.2.3
+119,601,just,Mississippi,Jackson,2.2.2.4
+120,769,ketchup,Mississippi,Jackson,2.2.3.1
+121,318,motive,Louisiana,Shreveport,2.2.3.2
+122,501,last,Arkansas,Little Rock,2.2.3.3
+123,662,shoeshine,Mississippi,Southaven,2.2.3.4
+124,901,based,Tennessee,Memphis,2.2.4.1
+125,731,committee,Tennessee,Jackson,2.2.4.2
+126,327,mining,Arkansas,Jonesboro,2.2.4.3
+127,870,effects,Arkansas,Jonesboro,2.2.4.4
+128,417,reading,Missouri,Springfield,2.3.1.1
+129,913,bottom,Kansas,Overland Park,2.3.1.2
+130,816,fetish,Missouri,Kansas City,2.3.1.3
+131,975,buckle,Missouri,Kansas City,2.3.1.4
+132,660,judges,Missouri,Sedalia,2.3.2.1
+133,235,animal,Missouri,Columbia,2.3.2.2
+134,573,welcome,Missouri,Columbia,2.3.2.3
+135,636,schmittou,Missouri,O'Fallon,2.3.2.4
+136,314,matter,Missouri,St. Louis,2.3.3.1
+137,557,lilac,Missouri,St. Louis,2.3.3.2
+138,618,chat-of,Illinois,Belleville,2.3.3.3
+139,730,comes,Illinois,Belleville,2.3.3.4
+140,217,nothing,Illinois,Springfield,2.3.4.1
+141,447,roaring,Illinois,Springfield,2.3.4.2
+142,309,mishap,Illinois,Peoria,2.3.4.3
+143,861,offshoot,Illinois,Peoria,2.3.4.4
+144,563,alchemy,Iowa,Davenport,2.4.1.1
+145,319,mixed-up,Iowa,Cedar Rapids,2.4.1.2
+146,515,little,Iowa,Des Moines,2.4.1.3
+147,402,reason,Nebraska,Omaha,2.4.1.4
+148,531,limit,Nebraska,Omaha,2.4.2.1
+149,712,cotton,Iowa,Sioux City,2.4.2.2
+150,320,means,Minnesota,St. Cloud,2.4.2.3
+151,218,native,Minnesota,Duluth,2.4.2.4
+152,763,ketchum,Minnesota,Brooklyn Park,2.4.3.1
+153,612,showdown,Minnesota,Minneapolis,2.4.3.2
+154,651,child,Minnesota,St. Paul,2.4.3.3
+155,952,billion,Minnesota,Lakeville,2.4.3.4
+156,641,short,Iowa,Mason City,2.4.4.1
+157,507,losing,Minnesota,Rochester,2.4.4.2
+158,534,elmer,Wisconsin,Eau Claire,2.4.4.3
+159,715,cattle,Wisconsin,Eau Claire,2.4.4.4
+160,906,passage,Michigan,Marquette,2.5.1.1
+161,274,inquiry,Wisconsin,Green Bay,2.5.1.2
+162,920,bonus,Wisconsin,Green Bay,2.5.1.3
+163,414,order,Wisconsin,Milwaukee,2.5.1.4
+164,262,nation,Wisconsin,Kenosha,2.5.2.1
+165,353,milum,Wisconsin,Madison,2.5.2.2
+166,608,joseph,Wisconsin,Madison,2.5.2.3
+167,224,nunnery,Illinois,Elgin,2.5.2.4
+168,847,africa,Illinois,Elgin,2.5.3.1
+169,331,mohammed,Illinois,Aurora,2.5.3.2
+170,630,james,Illinois,Aurora,2.5.3.3
+171,779,wynkoop,Illinois,Joliet,2.5.3.4
+172,815,vital,Illinois,Joliet,2.5.4.1
+173,464,roger,Illinois,Cicero,2.5.4.2
+174,708,cohesive,Illinois,Cicero,2.5.4.3
+175,312,madden,Illinois,Chicago,2.5.4.4
+176,773,kagami,Illinois,Chicago,2.6.1.1
+177,872,afghan,Illinois,Chicago,2.6.1.2
+178,219,windup,Indiana,Hammond,2.6.1.3
+179,574,liquor,Indiana,South Bend,2.6.1.4
+180,269,winship,Michigan,Kalamazoo,2.6.2.1
+181,517,holding,Michigan,Lansing,2.6.2.2
+182,616,judishe,Michigan,Grand Rapids,2.6.2.3
+183,231,named,Michigan,Muskegon,2.6.2.4
+184,989,bofop,Michigan,Saginaw,2.6.3.1
+185,810,foods,Michigan,Flint,2.6.3.2
+186,248,interview,Michigan,Troy,2.6.3.3
+187,947,bring,Michigan,Troy,2.6.3.4
+188,586,lavish,Michigan,Warren,2.6.4.1
+189,313,medium,Michigan,Detroit,2.6.4.2
+190,734,camera,Michigan,Ann Arbor,2.6.4.3
+191,419,wiretap,Ohio,Toledo,2.6.4.4
+192,567,logic,Ohio,Toledo,3.1.1.1
+193,260,inches,Indiana,Fort Wayne,3.1.1.2
+194,765,actually,Indiana,Lafayette,3.1.1.3
+195,317,meeting,Indiana,Indianapolis,3.1.1.4
+196,463,hiroshima,Indiana,Indianapolis,3.1.2.1
+197,812,often,Indiana,Evansville,3.1.2.2
+198,930,poems,Indiana,Evansville,3.1.2.3
+199,502,lawson,Kentucky,Louisville,3.1.2.4
+200,283,infamy,Ohio,Cincinnati,3.1.3.1
+201,513,lithium,Ohio,Cincinnati,3.1.3.2
+202,326,manage,Ohio,Dayton,3.1.3.3
+203,937,bombing,Ohio,Dayton,3.1.3.4
+204,380,moves,Ohio,Columbus,3.1.4.1
+205,614,chatter,Ohio,Columbus,3.1.4.2
+206,220,unions,Ohio,Newark,3.1.4.3
+207,740,course,Ohio,Newark,3.1.4.4
+208,436,warmish,Ohio,Lorain,3.2.1.1
+209,440,errors,Ohio,Lorain,3.2.1.2
+210,216,nitzsche,Ohio,Cleveland,3.2.1.3
+211,234,anymore,Ohio,Akron,3.2.1.4
+212,330,mummies,Ohio,Akron,3.2.2.1
+213,724,ignore,Pennsylvania,New Castle,3.2.2.2
+214,412,written,Pennsylvania,Pittsburgh,3.2.2.3
+215,878,vakuf,Pennsylvania,Pittsburgh,3.2.2.4
+216,582,eleven,Pennsylvania,Erie,3.2.3.1
+217,814,after,Pennsylvania,Erie,3.2.3.2
+218,624,january,New York,Buffalo,3.2.3.3
+219,716,cottage,New York,Buffalo,3.2.3.4
+220,585,level,New York,Rochester,3.2.4.1
+221,315,middle,New York,Syracuse,3.2.4.2
+222,680,chiefs,New York,Syracuse,3.2.4.3
+223,802,vision,Vermont,Burlington,3.2.4.4
+224,207,ionizing,Maine,Portland,3.3.1.1
+225,339,mumbo,Massachusetts,Lynn,3.3.1.2
+226,781,gift,Massachusetts,Lynn,3.3.1.3
+227,617,shooting,Massachusetts,Boston,3.3.1.4
+228,857,following,Massachusetts,Boston,3.3.2.1
+229,401,raised,Rhode Island,Providence,3.3.2.2
+230,508,illusive,Massachusetts,Norfolk,3.3.2.3
+231,774,anger,Massachusetts,Norfolk,3.3.2.4
+232,351,mold,Massachusetts,Lowell,3.3.3.1
+233,978,bukavu,Massachusetts,Lowell,3.3.3.2
+234,603,chasm,New Hampshire,Manchester,3.3.3.3
+235,413,redeem,Massachusetts,Springfield,3.3.3.4
+236,860,vicious,Connecticut,Hartford,3.3.4.1
+237,959,pulp,Connecticut,Hartford,3.3.4.2
+238,518,leadoff,New York,Albany,3.3.4.3
+239,838,femoff,New York,Albany,3.3.4.4
+240,607,jessica,New York,Binghamton,3.4.1.1
+241,329,manweb,New York,New City,3.4.1.2
+242,845,overall,New York,New City,3.4.1.3
+243,914,better,New York,Yonkers,3.4.1.4
+244,203,handsome,Connecticut,Bridgeport,3.4.2.1
+245,475,recall,Connecticut,Bridgeport,3.4.2.2
+246,631,ashamed,New York,Brentwood,3.4.2.3
+247,934,palmer,New York,Brentwood,3.4.2.4
+248,363,mitchum,New York,Hempstead,3.4.3.1
+249,516,letitia,New York,Hempstead,3.4.3.2
+250,212,indian,New York,New York,3.4.3.3
+251,332,moman,New York,New York,3.4.3.4
+252,347,america,New York,New York,3.4.4.1
+253,646,charge,New York,New York,3.4.4.2
+254,718,active,New York,New York,3.4.4.3
+255,917,putting,New York,New York,3.4.4.4
+256,929,bonobo,New York,New York,3.5.1.1
+257,201,inside,New Jersey,Jersey City,3.5.1.2
+258,551,loyalty,New Jersey,Jersey City,3.5.1.3
+259,908,passive,New Jersey,Elizabeth,3.5.1.4
+260,862,fashion,New Jersey,Newark,3.5.2.1
+261,973,become,New Jersey,Newark,3.5.2.2
+262,272,heineken,Pennsylvania,Scranton,3.5.2.3
+263,570,looks,Pennsylvania,Scranton,3.5.2.4
+264,484,river,Pennsylvania,Allentown,3.5.3.1
+265,610,sheets,Pennsylvania,Allentown,3.5.3.2
+266,835,family,Pennsylvania,Allentown,3.5.3.3
+267,609,giuseppe,New Jersey,Trenton,3.5.3.4
+268,640,shares,New Jersey,Trenton,3.5.4.1
+269,732,common,New Jersey,Toms River,3.5.4.2
+270,848,verify,New Jersey,Toms River,3.5.4.3
+271,856,village,New Jersey,Camden,3.5.4.4
+272,215,until,Pennsylvania,Philadelphia,3.6.1.1
+273,267,enjoying,Pennsylvania,Philadelphia,3.6.1.2
+274,445,rural,Pennsylvania,Philadelphia,3.6.1.3
+275,223,newnam,Pennsylvania,Lancaster,3.6.1.4
+276,717,getting,Pennsylvania,Lancaster,3.6.2.1
+277,302,mason,Delaware,Wilmington,3.6.2.2
+278,410,rates,Maryland,Baltimore,3.6.2.3
+279,443,rearm,Maryland,Baltimore,3.6.2.4
+280,667,judging,Maryland,Baltimore,3.6.3.1
+281,202,insane,District of Columbia,Washington,3.6.3.2
+282,771,kicked,District of Columbia,Washington,3.6.3.3
+283,571,looked,Virginia,Arlington,3.6.3.4
+284,703,cosmo,Virginia,Arlington,3.6.4.1
+285,227,unknowing,Maryland,Germantown,3.6.4.2
+286,240,owners,Maryland,Germantown,3.6.4.3
+287,301,most,Maryland,Germantown,3.6.4.4
+288,686,jewfish,Virginia,Richmond,4.1.1.1
+289,804,officer,Virginia,Richmond,4.1.1.2
+290,757,calling,Virginia,Virginia Beach,4.1.1.3
+291,948,approve,Virginia,Virginia Beach,4.1.1.4
+292,252,nylon,North Carolina,Greenville,4.1.2.1
+293,919,potpie,North Carolina,Raleigh,4.1.2.2
+294,984,before,North Carolina,Raleigh,4.1.2.3
+295,336,memeish,North Carolina,Greensboro,4.1.2.4
+296,743,crime,North Carolina,Greensboro,4.1.3.1
+297,434,rumor,Virginia,Lynchburg,4.1.3.2
+298,540,lawyers,Virginia,Roanoke,4.1.3.3
+299,826,finish,Virginia,Roanoke,4.1.3.4
+300,304,measure,West Virginia,Charleston,4.1.4.1
+301,681,achieved,West Virginia,Charleston,4.1.4.2
+302,606,sciascia,Kentucky,Ashland,4.1.4.3
+303,859,philip,Kentucky,Lexington,4.1.4.4
+304,270,next,Kentucky,Bowling Green,4.2.1.1
+305,364,major,Kentucky,Bowling Green,4.2.1.2
+306,931,bombed,Tennessee,Clarksville,4.2.1.3
+307,615,shuttle,Tennessee,Nashville,4.2.1.4
+308,629,schnepp,Tennessee,Nashville,4.2.2.1
+309,865,official,Tennessee,Knoxville,4.2.2.2
+310,276,engage,Virginia,Bristol,4.2.2.3
+311,828,ivanov,North Carolina,Asheville,4.2.2.4
+312,821,found,South Carolina,Greenville,4.2.3.1
+313,864,future,South Carolina,Greenville,4.2.3.2
+314,704,kaiser,North Carolina,Charlotte,4.2.3.3
+315,980,obvious,North Carolina,Charlotte,4.2.3.4
+316,472,reagan,North Carolina,Fayetteville,4.2.4.1
+317,910,bids,North Carolina,Fayetteville,4.2.4.2
+318,843,from,South Carolina,Charleston,4.2.4.3
+319,854,floor,South Carolina,Charleston,4.2.4.4
+320,803,fossum,South Carolina,Columbia,4.3.1.1
+321,839,vamp,South Carolina,Columbia,4.3.1.2
+322,706,gossage,Georgia,Augusta,4.3.1.3
+323,762,action,Georgia,Augusta,4.3.1.4
+324,912,between,Georgia,Savannah,4.3.2.1
+325,478,rockoff,Georgia,Macon,4.3.2.2
+326,404,razor,Georgia,Atlanta,4.3.2.3
+327,470,works,Georgia,Atlanta,4.3.2.4
+328,678,shockwave,Georgia,Atlanta,4.3.3.1
+329,943,prime,Georgia,Atlanta,4.3.3.2
+330,770,yankees,Georgia,Roswell,4.3.3.3
+331,423,uranium,Tennessee,Chattanooga,4.3.3.4
+332,256,knowledge,Alabama,Huntsville,4.3.4.1
+333,938,bamoff,Alabama,Huntsville,4.3.4.2
+334,205,unusual,Alabama,Birmingham,4.3.4.3
+335,659,shelby,Alabama,Birmingham,4.3.4.4
+336,334,memory,Alabama,Montgomery,4.4.1.1
+337,229,nannoff,Georgia,Albany,4.4.1.2
+338,448,rearview,Florida,Tallahassee,4.4.1.3
+339,850,values,Florida,Tallahassee,4.4.1.4
+340,352,million,Florida,Gainesville,4.4.2.1
+341,324,manner,Florida,Jacksonville,4.4.2.2
+342,904,bizarre,Florida,Jacksonville,4.4.2.3
+343,386,haimovitch,Florida,Deltona,4.4.2.4
+344,321,month,Florida,Orlando,4.4.3.1
+345,407,rising,Florida,Orlando,4.4.3.2
+346,689,chef-up,Florida,Orlando,4.4.3.3
+347,863,fujiyama,Florida,Lakeland,4.4.3.4
+348,656,geology,Florida,Tampa,4.4.4.1
+349,813,fathom,Florida,Tampa,4.4.4.2
+350,727,accounting,Florida,St. Petersburg,4.4.4.3
+351,941,board,Florida,North Port,4.4.4.4
+352,239,nimby,Florida,Cape Coral,4.5.1.1
+353,772,quicken,Florida,Port St. Lucie,4.5.1.2
+354,561,alleged,Florida,West Palm Beach,4.5.1.3
+355,728,convey,Florida,West Palm Beach,4.5.1.4
+356,754,clear,Florida,Fort Lauderdale,4.5.2.1
+357,954,player,Florida,Fort Lauderdale,4.5.2.2
+358,305,mostly,Florida,Miami,4.5.2.3
+359,645,surely,Florida,Miami,4.5.2.4
+360,786,kovich,Florida,Miami,4.5.3.1
